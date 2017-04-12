@@ -1,0 +1,25 @@
+
+<div class="text-align-center">
+	<a href="/#/" class="font-size-20px">
+		Back to Search
+	</a>
+</div>
+
+<h3>{{days}} {{daysString}} forecast for {{city}}</h3>
+
+<p>
+	<i class="material-icons" style="vertical-align: bottom;">location_on</i>
+	<a target="_blank" ng-href="http://www.google.com/maps/place/{{weatherResult.city.coord.lat}},{{weatherResult.city.coord.lon}}">{{city}} in maps</a>
+</p>
+
+<p>
+	<i class="material-icons" style="vertical-align: bottom;">date_range</i>
+	Forecast Days:
+	<a href="#/forecast/5" ng-class="{'bg-primary' : days == 5}">5</a> | 
+	<a href="#/forecast/7" ng-class="{'bg-primary' : days == 7}">7</a> |
+	<a href="#/forecast/10" ng-class="{'bg-primary' : days == 10}">10</a>
+</p>
+
+<hr>
+
+<forecast-day forecast-object="w" to-int="toInt(aforecast)" ng-repeat="w in weatherResult.list"></forecast-day>
