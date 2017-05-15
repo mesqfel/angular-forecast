@@ -9,7 +9,7 @@ weatherApp.service('weatherService', ['$resource', function($resource) {
 			q : city,
 			units:'metric',
 			cnt: days,
-			appid: '8cf59b9fde73d3cfa8a6a306774963ba'
+			appid: 'YOUR_OPENWEATHER_API_KEY_HERE'
 		});
 		
 	};

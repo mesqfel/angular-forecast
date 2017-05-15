@@ -6,18 +6,23 @@ weatherApp.controller('forecastController', ['$scope', '$routeParams', '$locatio
 	
 	$scope.daysString = $scope.days > 1 ? 'days' : 'day';
 
-	weatherService.getWeather($scope.city, $scope.days).$promise.then(
+	if($scope.city){
+		weatherService.getWeather($scope.city, $scope.days).$promise.then(
 
-		//success
-		function(data){
-			$scope.weatherResult = data;
-		},
-		
-		//error
-		function( error ){
-			$location.path("/error");
-		}
-	);
+			//success
+			function(data){
+				$scope.weatherResult = data;
+			},
+			
+			//error
+			function( error ){
+				return $location.path("/error");
+			}
+		);
+	}
+	else{
+		return $location.path("/");
+	}
 	
 	$scope.toInt = function(val){
 		return parseInt(val);
