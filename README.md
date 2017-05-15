@@ -1,7 +1,7 @@
 # angular-forecast
 
 A Weather Forecast SPA app made with AngularJS and materialize css.<br>
-It fetchs forecast data from <a href="http://openweathermap.org/api">openweathermap api</a><br>
+It fetches forecast data from <a href="http://openweathermap.org/api">openweathermap api</a><br>
 You can check it live here: <a href="http://www.mesquitafelipe.com/forecast" target="_blank">http://www.mesquitafelipe.com/forecast</a>
 
 
